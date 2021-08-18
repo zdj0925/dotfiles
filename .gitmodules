@@ -1,0 +1,3 @@
+[submodule ".vim/pack/zhaodj/start/vim-ariline"]
+	path = .vim/pack/zhaodj/start/vim-ariline
+	url = https://github.com/vim-airline/vim-airline.git
