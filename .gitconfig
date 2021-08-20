@@ -35,3 +35,5 @@
 [user]
 	email = zdj925@gmail.com
 	name = zdj925@gmail.com
+[http]
+	version = HTTP/1.1

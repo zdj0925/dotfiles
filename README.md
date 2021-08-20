@@ -11,4 +11,9 @@ cd ~/dotfiles
 git submodule deinit -f -- .vim/pack/<key>/start/vim-airline
 rm -fr .git/modules/.vim/pack/<key>/start/vim-airline
 git rm -f .vim/pack/<key>/start/vim-ariline
+
+---------------- update plug ---------
+git submodule sync
+git submodule update --init 
+git submodule update --init --recursive
 ```

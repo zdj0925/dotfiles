@@ -30,13 +30,13 @@ get_list() {
 git_submodule_add () {
     uri="https://github.com"
     start_path=".vim/pack/$LOGNAME/start"
-    opt_path=".vim/pack/$LOGNAME/start"
+    opt_path=".vim/pack/$LOGNAME/opt"
     for PLUG in ${AStart[@]}
     do
        git submodule add  $uri/$PLUG $start_path/${PLUG##*/}
     done
 
-    for PLUG in ${Aopt[@]}
+    for PLUG in ${AOpt[@]}
     do
        git submodule add  $uri/$PLUG $opt_path/${PLUG##*/}
     done
