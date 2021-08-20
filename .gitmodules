@@ -1,3 +1,48 @@
 [submodule ".vim/pack/zhaodj/start/vim-ariline"]
 	path = .vim/pack/zhaodj/start/vim-ariline
 	url = https://github.com/vim-airline/vim-airline.git
+[submodule ".vim/pack/zhaodj/start/ctrlp.vim"]
+	path = .vim/pack/zhaodj/start/ctrlp.vim
+	url = https://github.com/ctrlpvim/ctrlp.vim
+[submodule ".vim/pack/zhaodj/start/vim-airline"]
+	path = .vim/pack/zhaodj/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule ".vim/pack/zhaodj/start/vim-airline-themes"]
+	path = .vim/pack/zhaodj/start/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes
+[submodule ".vim/pack/zhaodj/start/vim-cpp-enhanced-highlight"]
+	path = .vim/pack/zhaodj/start/vim-cpp-enhanced-highlight
+	url = https://github.com/octol/vim-cpp-enhanced-highlight
+[submodule ".vim/pack/zhaodj/start/DoxygenToolkit.vim"]
+	path = .vim/pack/zhaodj/start/DoxygenToolkit.vim
+	url = https://github.com/vim-scripts/DoxygenToolkit.vim
+[submodule ".vim/pack/zhaodj/start/ale"]
+	path = .vim/pack/zhaodj/start/ale
+	url = https://github.com/dense-analysis/ale
+[submodule ".vim/pack/zhaodj/start/vim-surround"]
+	path = .vim/pack/zhaodj/start/vim-surround
+	url = https://github.com/tpope/vim-surround
+[submodule ".vim/pack/zhaodj/start/vim-repeat"]
+	path = .vim/pack/zhaodj/start/vim-repeat
+	url = https://github.com/tpope/vim-repeat
+[submodule ".vim/pack/zhaodj/start/vim-unimpaired"]
+	path = .vim/pack/zhaodj/start/vim-unimpaired
+	url = https://github.com/tpope/vim-unimpaired
+[submodule ".vim/pack/zhaodj/start/nerdcommenter"]
+	path = .vim/pack/zhaodj/start/nerdcommenter
+	url = https://github.com/preservim/nerdcommenter
+[submodule ".vim/pack/zhaodj/start/ultisnips"]
+	path = .vim/pack/zhaodj/start/ultisnips
+	url = https://github.com/SirVer/ultisnips
+[submodule ".vim/pack/zhaodj/start/vim-snippets"]
+	path = .vim/pack/zhaodj/start/vim-snippets
+	url = https://github.com/honza/vim-snippets
+[submodule ".vim/pack/zhaodj/start/YouCompleteMe"]
+	path = .vim/pack/zhaodj/start/YouCompleteMe
+	url = https://github.com/ycm-core/YouCompleteMe
+[submodule ".vim/pack/zhaodj/start/vim-markdown"]
+	path = .vim/pack/zhaodj/start/vim-markdown
+	url = https://github.com/tpope/vim-markdown
+[submodule ".vim/pack/zhaodj/opt/vim-markdown"]
+	path = .vim/pack/zhaodj/opt/vim-markdown
+	url = https://github.com/tpope/vim-markdown
