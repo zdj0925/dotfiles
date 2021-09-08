@@ -244,9 +244,9 @@ colors:
   #
   # Allowed values are CellForeground and CellBackground, which reference the
   # affected cell, or hexadecimal colors like #ff00ff.
-  #selection:
-  #  text: CellBackground
-  #  background: CellForeground
+  selection:
+     text: '0x282a36'
+     background: '0xbbc5ff'    
 
   # Normal colors
   #normal:
@@ -274,15 +274,15 @@ colors:
   #
   # If the dim colors are not set, they will be calculated automatically based
   # on the `normal` colors.
-  #dim:
-  #  black:   '#131415'
-  #  red:     '#864343'
-  #  green:   '#777c44'
-  #  yellow:  '#9e824c'
-  #  blue:    '#556a7d'
-  #  magenta: '#75617b'
-  #  cyan:    '#5b7d78'
-  #  white:   '#828482'
+  dim:
+    black:   '#000000'
+    red:     '#8c3336'
+    green:   '#7a8530'
+    yellow:  '#97822e'
+    blue:    '#506d8f'
+    magenta: '#80638e'
+    cyan:    '#497e7a'
+    white:   '#9a9a9a'
 
   # Indexed Colors
   #
@@ -340,6 +340,7 @@ colors:
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
 #background_opacity: 1.0
+background_opacity: 0.45
 
 #selection:
   # This string contains all characters that are used as separators for

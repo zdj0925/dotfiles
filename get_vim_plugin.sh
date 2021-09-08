@@ -20,10 +20,8 @@ get_list() {
         fi
     done
     
-    echo "AStart"
-    echo ${AStart[@]}
-    echo "AOpt"
-    echo ${AOpt[@]}
+    echo "AStart" ${AStart[@]}
+    echo "AOpt" ${AOpt[@]}
 
     ret="$?"
 }
@@ -40,6 +38,7 @@ git_submodule_add () {
     do
        git submodule add  $uri/$PLUG $opt_path/${PLUG##*/}
     done
+    git submodule update --init --recursiv
 }
 main () {
     get_list

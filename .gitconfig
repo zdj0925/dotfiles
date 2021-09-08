@@ -3,10 +3,10 @@
   ap = add --patch
   b = branch
   bigtree = log --pretty=format:'%C(yellow)commit %H%Creset%C(auto)%d%Creset%nCommitter: %cn <%ce>%n%n%s%n%C(magenta)%cr (%cD)%Creset%n%n%b' --name-status --graph
-  c = commit
+  ci = commit
   ca = commit --amend
   can = commit --amend --no-edit
-  ch = checkout
+  co = checkout
   diffc = diff --cached
   last = log -1 --name-status
   minitree = log --oneline --graph
@@ -15,7 +15,7 @@
   rebc = rebase --continue
   rebi = rebase -i
   rebs = rebase --skip
-  s = status
+  st = status
   size = count-objects -vH
   sleuth = log --all --full-history
   su = status -u
@@ -37,3 +37,4 @@
 	name = zdj925@gmail.com
 [http]
 	version = HTTP/1.1
+	postBuffer = 524288000
