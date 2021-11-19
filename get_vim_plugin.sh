@@ -29,6 +29,7 @@ git_submodule_add () {
     uri="https://github.com"
     start_path=".vim/pack/$LOGNAME/start"
     opt_path=".vim/pack/$LOGNAME/opt"
+
     for PLUG in ${AStart[@]}
     do
        git submodule add  $uri/$PLUG $start_path/${PLUG##*/}
@@ -44,6 +45,6 @@ main () {
     get_list
     git_submodule_add
 }
-export http_proxy="172.23.220.1:1080"
-export https_proxy="172.23.220.1:1080"
+#export http_proxy="172.23.220.1:1080"
+#export https_proxy="172.23.220.1:1080"
 main
