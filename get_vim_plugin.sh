@@ -1,17 +1,18 @@
 #!/usr/bin/env bash
+#
 [ -z "$VIM_PLUGIN_LIST" ] && VIM_PLUGIN_LIST="vim_plugin.list"
 AStart=()
 AOpt=()
 
 testpath() {
     if [ -d "$1" ]; then
-        echo "rm -fr $1"
-        rm -fr $1
-        echo "ln -snf ${1%/*}/logname ${1%/*}/$LOGNAME"
-        ln -snf "${1%/*}/logname" "${1%/*}/$LOGNAME"
+        echo "mount --bind ${1%/*}/logname ${1%/*}/$LOGNAME"
+        sudo mount --bind "${1%/*}/logname" "${1%/*}/$LOGNAME"
     else
-        echo "ln -snf ${1%/*}/logname ${1%/*}/$LOGNAME"
-        ln -snf "${1%/*}/logname" "${1%/*}/$LOGNAME"
+        echo "mkdir -p ${1}"
+        mkdir -p "${1}"
+        echo "mount --bind ${1%/*}/logname ${1%/*}/$LOGNAME"
+        sudo mount --bind "${1%/*}/logname" "${1%/*}/$LOGNAME"
     fi
 
 }
