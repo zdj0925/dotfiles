@@ -39,6 +39,6 @@
 [http]
 	version = HTTP/1.1
 	postBuffer = 524288000
-	proxy = socks5://127.0.0.1:1080
+	proxy = socks5://127.0.0.1:10811
 [https]
-	proxy = socks5://127.0.0.1:1080
+	proxy = socks5://127.0.0.1:10811

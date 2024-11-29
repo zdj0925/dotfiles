@@ -53,7 +53,7 @@ endif
 
 "文件编码
 set encoding=utf-8
-set fileencodings=ucs-bom,utf-8,cp936,gbk,gb18030,latin1
+set fileencodings=ucs-bom,utf-8,cp936,gbk,gb18030,big5,euc-jp,euc-kr,latin1
 set termencoding=utf-8
 "防止特殊符号无法正常显示
 set ambiwidth=double
@@ -68,7 +68,8 @@ set smartindent
 set number
 set showmatch
 set cursorline
-set mouse=a
+set autoindent
+set mouse=c
 colorscheme desert
 "文件类型
 autocmd BufEnter *.pc,*.cp,*.xc,*.sqc  set filetype=esqlc
@@ -77,7 +78,7 @@ autocmd BufEnter mk    set filetype=sh
 set pastetoggle=<F9>
 
 "set vim-airline
-let g:airline_theme="luna" 
+"let g:airline_theme="luna" 
 
 "这个是安装字体后 必须设置此项" 
 let g:airline_powerline_fonts = 1   
@@ -86,10 +87,25 @@ let g:airline_powerline_fonts = 1
  "我还省去了minibufexpl插件，因为我习惯在1个Tab下用多个buffer"
  let g:airline#extensions#tabline#enabled = 1
  let g:airline#extensions#tabline#buffer_nr_show = 1
+"let g:airline#extensions#tabline#left_sep = ' '
+"let g:airline#extensions#tabline#left_alt_sep = '|'
 
  "设置切换Buffer快捷键"
- nnoremap <C-N> :bn<CR>
- nnoremap <C-P> :bp<CR>
+" nnoremap <C-N> :bn<CR>
+" nnoremap <C-P> :bp<CR>
+noremap [b :bp<cr>
+noremap ]b :bn<cr>
+noremap [t :tabp<cr>
+noremap ]t :tabn<cr>
+map <leader>1 :b 1<CR>
+map <leader>2 :b 2<CR>
+map <leader>3 :b 3<CR>
+map <leader>4 :b 4<CR>
+map <leader>5 :b 5<CR>
+map <leader>6 :b 6<CR>
+map <leader>7 :b 7<CR>
+map <leader>8 :b 8<CR>
+map <leader>9 :b 9<CR>
 
  " 关闭状态显示空白符号计数,这个对我用处不大"
  let g:airline#extensions#whitespace#enabled = 0
@@ -100,4 +116,3 @@ if has('win32')
   set guifont=Hermit:h13
   set guifontwide=Microsoft_YaHei_Mono:h12
 endif
-

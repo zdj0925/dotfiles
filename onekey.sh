@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-[ -z "$DOT_PATH" ] && DOT_PATH="$HOME/dotfiles"
+[ -z "$DOT_PATH" ] && DOT_PATH="$PWD"
 
 do_backup() {
     if [ -e "$1" ]; then
