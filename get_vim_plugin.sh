@@ -3,6 +3,18 @@
 AStart=()
 AOpt=()
 
+testpath() {
+    if [ -d "$1" ]; then
+        echo "rm -fr $1"
+        rm -fr $1
+        echo "ln -snf ${1%/*}/logname ${1%/*}/$LOGNAME"
+        ln -snf "${1%/*}/logname" "${1%/*}/$LOGNAME"
+    else
+        echo "ln -snf ${1%/*}/logname ${1%/*}/$LOGNAME"
+        ln -snf "${1%/*}/logname" "${1%/*}/$LOGNAME"
+    fi
+
+}
 get_list() {
     for LINE in `cat $VIM_PLUGIN_LIST`
     do
@@ -19,7 +31,7 @@ get_list() {
             AOpt[${#AOpt[*]}]=$LINE
         fi
     done
-    
+
     echo "AStart" ${AStart[@]}
     echo "AOpt" ${AOpt[@]}
 
@@ -32,16 +44,20 @@ git_submodule_add () {
 
     for PLUG in ${AStart[@]}
     do
-       git submodule add  $uri/$PLUG $start_path/${PLUG##*/}
+        echo "git submodule add  $uri/$PLUG $start_path/${PLUG##*/}"
+        git submodule add  $uri/$PLUG $start_path/${PLUG##*/}
     done
 
     for PLUG in ${AOpt[@]}
     do
-       git submodule add  $uri/$PLUG $opt_path/${PLUG##*/}
+        echo "git submodule add  $uri/$PLUG $opt_path/${PLUG##*/}"
+        git submodule add  $uri/$PLUG $opt_path/${PLUG##*/}
     done
-    git submodule update --init --recursiv
+    echo "git submodule update --init --recursiave"
+    git submodule update --init --recursive
 }
 main () {
+    testpath $PWD/.vim/pack/$LOGNAME
     get_list
     git_submodule_add
 }
