@@ -116,3 +116,7 @@ if has('win32')
   set guifont=Hermit:h13
   set guifontwide=Microsoft_YaHei_Mono:h12
 endif
+"set vim-markdown
+let g:markdown_fenced_languages = ['html', 'vim', 'python', 'bash=sh']
+"let g:makdown_syntax_conceal = 0
+let g:markdown_minlines = 100

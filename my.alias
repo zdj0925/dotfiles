@@ -1,0 +1,35 @@
+#################ALIAS ENV################
+alias ld="ls -lrt"
+alias rm="rm -i"
+alias cp="cp -i"
+alias mv="mv -i"
+alias lf="ls -lF"
+alias l='ls -altr'
+alias top='top -u ${LOGNAME}'
+#---------------SET TOOLS-------------------------
+alias agrep='find . -type f -regextype posix-extended -regex ".*\.(c|h|pc|cc|cp|xc|cpp|sdf)" | xargs grep --color '
+alias cgrep='find . -type f -regextype posix-extended -regex ".*\.(c|h|pc|cp|xc|cpp)" | xargs grep --color '
+alias hgrep='find . -type f -regextype posix-extended -regex ".*\.(h|hpp|inc)" | xargs grep --color '
+alias mgrep='find . -type f -name "*[mM]ak*"| xargs grep --color '
+alias sdfgrep='find . -type f -name "*sdf*" | xargs grep --color '
+alias mktag='ctags --langmap=c:.xc.pc.sqc.c.h -f ${HOME}/.tags -R ${HOME}/src/hslib/hsincl ${HOME}/src/hslib/libsrc ${HOME}/src/include ${HOME}/src /usr/include    >/dev/null &'
+#alias mktag='ctags --langmap=c:.xc.pc.sqc.c.h -f ${HOME}/.tags -R ${HOME}/src/hslib/hsincl ${HOME}/src/hslib/libsrc ${HOME}/src/include ${HOME}/src /usr/include /usr/lib64/gcc/x86_64-suse-linux/4.8/include /usr/src/linux  >/dev/null &'
+#---------------SET PATH--------------------------
+export PATH=.:${HOME}/.usr/bin:${PATH}
+alias cds='cd $HOME/src'
+#-------------------------------------------------------
+alias sqlci='sqlplus  $DB_CURUSR/$(myencrypt D ${CURPWD})@$ORACLE_SID'  
+#alias ctags='~/.usr/ctags'
+#################ALIAS ENV################
+git_branch()
+{
+    branch=`git rev-parse --abbrev-ref HEAD 2>/dev/null`
+    if [ "${branch}" != ""  ]; then
+        if [ "${branch}" = "(no branch)"  ]; then
+            branch="(`git rev-parse --short HEAD`...)"
+        fi
+                echo "($branch)"
+    fi
+}
+PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W$(git_branch)\[\033[00m\]\$ '
+export PS1
