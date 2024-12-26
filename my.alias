@@ -5,8 +5,8 @@ alias mv="mv -i"
 alias ld="ls -lrt"
 alias lf="ls -lF"
 alias l='ls -altr'
-alias lg='ls -Str'
-alias lag='ls -aStr'
+alias lg='ls -Srl'
+alias lag='ls -aSrl'
 alias top='top -u ${LOGNAME}'
 #---------------SET TOOLS-------------------------
 alias agrep='find . -type f -regextype posix-extended -regex ".*\.(c|h|pc|cc|cp|xc|cpp|sdf)" | xargs grep --color '
